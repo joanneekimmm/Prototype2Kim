@@ -7,6 +7,8 @@ public class PlayerScript : MonoBehaviour
     public float horizontalInput;
     public float speed = 10.0f;
     public float xRange = 10.0f;
+
+    public GameObject projectilePrefabs;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +18,10 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(projectilePrefabs, transform.position, projectilePrefabs.transform.rotation);
+        }
         //keep the player in bounds
         if (transform.position.x < -xRange)
         {
