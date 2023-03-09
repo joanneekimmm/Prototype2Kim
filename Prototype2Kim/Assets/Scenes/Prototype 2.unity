@@ -620,16 +620,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e1316a3e46fdb349b6ff648610a1d71, type: 3}
---- !u!1 &1271125064 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6813162683071905520, guid: 7aacca772b976574a864515c57b027db, type: 3}
-  m_PrefabInstance: {fileID: 6813162682153265848}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1416760058 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8147441582976520013, guid: a55a2e7a06d4950489bf36d941e2639c, type: 3}
-  m_PrefabInstance: {fileID: 8147441583179602622}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1590138454
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,9 +733,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalPrefabs:
-  - {fileID: 2127094361}
-  - {fileID: 1665924365}
-  - {fileID: 1271125064}
+  - {fileID: 2437096620157796905, guid: a8c2076f36fa2224ab7413a555e80b0c, type: 3}
+  - {fileID: 3604370217391105546, guid: 45d8a31de63befe4b894170107c658b9, type: 3}
+  - {fileID: 6813162683071905520, guid: 7aacca772b976574a864515c57b027db, type: 3}
 --- !u!4 &1655018206
 Transform:
   m_ObjectHideFlags: 0
@@ -761,11 +751,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1665924365 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3604370217391105546, guid: 45d8a31de63befe4b894170107c658b9, type: 3}
-  m_PrefabInstance: {fileID: 3604370217915112199}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1831754939 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100046, guid: 0e1316a3e46fdb349b6ff648610a1d71, type: 3}
@@ -786,12 +771,7 @@ MonoBehaviour:
   horizontalInput: 0
   speed: 15
   xRange: 19
-  projectilePrefabs: {fileID: 1416760058}
---- !u!1 &2127094361 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2437096620157796905, guid: a8c2076f36fa2224ab7413a555e80b0c, type: 3}
-  m_PrefabInstance: {fileID: 2437096620446670960}
-  m_PrefabAsset: {fileID: 0}
+  projectilePrefabs: {fileID: 8147441582976520013, guid: a55a2e7a06d4950489bf36d941e2639c, type: 3}
 --- !u!1001 &2437096620446670960
 PrefabInstance:
   m_ObjectHideFlags: 0
