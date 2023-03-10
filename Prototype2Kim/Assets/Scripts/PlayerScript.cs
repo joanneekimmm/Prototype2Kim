@@ -5,10 +5,13 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour
 {
     public float horizontalInput;
-    public float speed = 10.0f;
+    public float verticalInput;
+    public float speed = 20.0f;
     public float xRange = 10.0f;
+    public Transform projectileSpawnPoint;
 
     public GameObject projectilePrefabs;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +23,7 @@ public class PlayerScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(projectilePrefabs, transform.position, projectilePrefabs.transform.rotation);
+            Instantiate(projectilePrefabs, projectileSpawnPoint.position, projectilePrefabs.transform.rotation);
         }
         //keep the player in bounds
         if (transform.position.x < -xRange)
@@ -33,5 +36,7 @@ public class PlayerScript : MonoBehaviour
         }
         horizontalInput = Input.GetAxis("Horizontal");
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+        verticalInput = Input.GetAxis("Vertical");
+        transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
     }
 }
