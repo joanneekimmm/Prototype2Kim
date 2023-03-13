@@ -457,7 +457,9 @@ MonoBehaviour:
   verticalInput: 0
   speed: 15
   xRange: 15
-  projectileSpawnPoint: {fileID: 0}
+  projectileSpawnPoint: {fileID: 588880865}
+  zMin: -1.5
+  zMax: 15.5
   projectilePrefabs: {fileID: 8147441582976520013, guid: a55a2e7a06d4950489bf36d941e2639c, type: 3}
 --- !u!1 &109178
 GameObject:
