@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class DetectCollisions : MonoBehaviour
 {
+    private GameManager SpawnManager;
     // Start is called before the first frame update
     void Start()
     {
-        
+        SpawnManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -17,14 +18,17 @@ public class DetectCollisions : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        //check if the other tag was the player, if it was, remove a life
         if (other.CompareTag("Player"))
         {
-            Debug.Log("GAME OVER!");
+            SpawnManager.AddLives(-1);
             Destroy(gameObject);
         }
-        else
+
+        //check if the other tag was an animal, if so, add points to the score 
+        else if (other.CompareTag("Animal"))
         {
-            Destroy(gameObject);
+            other.GetComponent<AnimalHunger>().FeedAnimal(1);
             Destroy(other.gameObject);
         }
     }
